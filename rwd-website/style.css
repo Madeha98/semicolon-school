@@ -10,32 +10,26 @@
 .navbar {
   background-color: #fff;
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
   width: 100%;
   height: 10vh;
-
+  /* margin-bottom: 10vh; */
   position: fixed;
+  z-index: 1;
 }
 
 .navbar img {
   width: 5rem;
   height: auto;
   display: flex;
-  justify-items: center;
 }
 
 .n-ul {
   display: flex;
-  justify-self: flex-end;
-  /* gap: 4rem; */
   align-items: center;
 }
 
 .navbar ul {
   display: flex;
-  /* gap: 4rem; */
-  justify-items: flex-end;
 
   list-style: none;
   text-decoration: none;
@@ -50,6 +44,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 10vh;
+  /* position: relative; */
 }
 
 .main h1 {
@@ -63,4 +59,5 @@
   background-color: green;
   width: 100%;
   height: 10vh;
+  /* position: relative; */
 }
