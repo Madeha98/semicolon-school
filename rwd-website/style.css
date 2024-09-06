@@ -131,8 +131,26 @@
 /* Facts */
 
 .facts {
-  background-color: #fff;
-  padding-top: 10rem;
+  /* background-color: #fff; */
+  /* padding-top: 15rem; */
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.1292892156862745) 30%,
+    rgba(0, 0, 0, 0.7399334733893557) 86%
+  );
+  z-index: 1;
+  /* display: flex; */
+  /* position: relative; */
+}
+
+.f-bg {
+  position: relative;
+}
+
+.f-bg img {
+  width: 100%;
+  height: auto;
 }
 
 .facts h1 {
