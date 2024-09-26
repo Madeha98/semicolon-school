@@ -3,9 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Recipe Finder</title>
   </head>
   <body>
+    <div class="container">
+      <h1>Recipe Finder</h1>
+      <h3>Search recipes now</h3>
+      <div class="search-bar">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Enter ingredient or recipe name"
+        />
+        <button type="submit" class="search-btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+      <div class="btn-container">
+        <div class="view-all-btn">
+          <button>View all</button>
+        </div>
+        <div class="favourites-btn">
+          <button>Favourites</button>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
