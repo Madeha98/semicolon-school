@@ -5,7 +5,7 @@ const resultsSection = document.getElementById("results-section");
 const resultsDiv = document.getElementById("results");
 
 async function searchRecipes() {
-  const searchInput = document.getElementById("search-input");
+  const searchInput = document.getEllcementById("search-input").value;
 
   if (!searchInput) {
     alert("Please enter a search term");
@@ -29,45 +29,44 @@ async function searchRecipes() {
       return;
     }
 
-    let resultsHtml = "";
     data.results.forEach((recipe) => {
-      // const div = document.createElement("div");
-      // // const recipeImgDiv = document.createElement("div");
-      // const img = document.createElement("img");
-      // // const recipeNameDiv = document.createElement("div");
-      // const h3 = document.createElement("h3");
-      // const a = document.createElement("a");
+      const div = document.createElement("div");
+      // const recipeImgDiv = document.createElement("div");
+      const img = document.createElement("img");
+      // const recipeNameDiv = document.createElement("div");
+      const h3 = document.createElement("h3");
+      const a = document.createElement("a");
 
-      // div.classList.add("recipe-card");
-      // div.classList.add("recipe-img");
-      // div.classList.add("recipe-name");
-      // a.classList.add("view-recipe-btn");
+      div.classList.add("recipe-card");
+      div.classList.add("recipe-img");
+      div.classList.add("recipe-name");
+      a.classList.add("view-recipe-btn");
 
-      // const recipeCard = document.getElementsByClassName("recipe-card");
-      // const recipeImgDiv = document.getElementsByClassName("recipe-img");
-      // const recipeNameDiv = document.getElementsByClassName("recipe-name");
-      // const viewBtn = document.getElementsByClassName("view-recipe-btn");
+      const recipeCard = document.getElementsByClassName("recipe-card");
+      const recipeImgDiv = document.getElementsByClassName("recipe-img");
+      const recipeNameDiv = document.getElementsByClassName("recipe-name");
+      const viewBtn = document.getElementsByClassName("view-recipe-btn");
 
-      // resultsDiv.appendChild(div.classList.add("recipe-card"));
-      // recipeCard.appendChild(recipeImgDiv);
-      // recipeImgDiv.appendChild((img.src = recipe.image));
-      // recipeCard.appendChild(recipeNameDiv);
-      // recipeNameDiv.appendChild((h3.textContent = recipe.title));
-      // recipeCard.appendChild((viewBtn.textContent = "View Recipe"));
+      resultsDiv.appendChild(recipeCard);
+      recipeCard.appendChild(recipeImgDiv);
+      recipeImgDiv.appendChild((img.src = recipe.image));
+      recipeCard.appendChild(recipeNameDiv);
+      recipeNameDiv.appendChild((h3.textContent = recipe.title));
+      recipeCard.appendChild((a.textContent = "View Recipe"));
 
-      resultsHtml += `
-      <div class="recipe-card">
-      <div class="recipe-img">
-        <img src"${recipe.image} alt="${recipe.title}">
-        </div>
-      <div class="recipe-name">
-        <h3>${recipe.title}</h3>
-        </div>
-        <a href="#" class="view-recipe-btn">View Recipe</a>
-        </div>
-        `;
-      // recipeCard = document.getElementsByClassName("recipe-card");
-      resultsDiv.innerHTML = resultsHtml;
+      // resultsDiv.innerHTML = `
+      // <div class="recipe-card">
+      // <div class="recipe-img">
+      //   <img src"${recipe.image} alt="${recipe.title}">
+      //   </div>
+      // <div class="recipe-name">
+      //   <h3>${recipe.title}</h3>
+      //   </div>
+      //   <a href="#" class="view-recipe-btn">View Recipe</a>
+      //   </div>
+      //   `;
+      // recipeCard.classList.add("recipe-card");
+      // resultsSection.appendChild(recipeCard);
     });
   } catch (error) {
     console.error(`Error:`, error);

@@ -15,6 +15,11 @@
       rel="stylesheet"
     />
     <title>Recipe Finder</title>
+    <!-- <style>
+      .hidden {
+        display: none;
+      }
+    </style> -->
   </head>
   <body>
     <div class="container">
@@ -44,9 +49,10 @@
             <input
               type="text"
               class="search-input"
+              id="search-input"
               placeholder="Enter ingredient or recipe name"
             />
-            <button type="submit" class="search-btn">
+            <button type="submit" class="search-btn" id="search-btn">
               <i class="fa fa-search"></i>
             </button>
           </div>
@@ -61,8 +67,8 @@
         </div>
       </div>
 
-      <div class="divider"></div>
-      <div class="divider-wrapper">
+      <div class="divider hidden"></div>
+      <div class="divider-wrapper hidden">
         <div class="custom-shape-divider-top-1727399350">
           <svg
             data-name="Layer 1"
@@ -79,47 +85,19 @@
       </div>
 
       <!-- Results -->
-      <div class="results-section">
+      <div class="results-section hidden" id="results-section">
         <h3 class="results-heading">Search results:</h3>
-        <div class="results">
+        <div class="results" id="results">
           <!-- Result card -->
-          <div class="recipe-card">
-            <!-- <div class="recipe-item"> -->
-            <!-- <div class="recipe-img"> -->
+          <!-- <div class="recipe-card">
+            <div class="recipe-img">
             <img src="food.jpg" alt="food" />
-            <!-- </div> -->
-            <div class="recipe-name">
-              <h3>Potato Chips</h3>
-            </div>
-            <a href="#" class="view-recipe-btn">View Recipe</a>
-            <!-- </div> -->
-          </div>
-          <!-- End of results card -->
-          <!-- Result card -->
-          <div class="recipe-card">
-            <!-- <div class="recipe-item"> -->
-            <div class="recipe-img">
-              <img src="food.jpg" alt="food" />
             </div>
             <div class="recipe-name">
               <h3>Potato Chips</h3>
             </div>
             <a href="#" class="view-recipe-btn">View Recipe</a>
-            <!-- </div> -->
-          </div>
-          <!-- End of results card -->
-          <!-- Result card -->
-          <div class="recipe-card">
-            <!-- <div class="recipe-item"> -->
-            <div class="recipe-img">
-              <img src="food.jpg" alt="food" />
-            </div>
-            <div class="recipe-name">
-              <h3>Potato Chips</h3>
-            </div>
-            <a href="#" class="view-recipe-btn">View Recipe</a>
-            <!-- </div> -->
-          </div>
+          </div> -->
           <!-- End of results card -->
         </div>
       </div>
