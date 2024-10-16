@@ -58,12 +58,12 @@ async function searchRecipes() {
       resultsHtml += `
       <div class="recipe-card">
       <div class="recipe-img">
-        <img src"${recipe.image} alt="${recipe.title}">
+        <img src="${recipe.image}" alt="${recipe.title}">
         </div>
       <div class="recipe-name">
         <h3>${recipe.title}</h3>
         </div>
-        <a href="#" class="view-recipe-btn">View Recipe</a>
+        <a class="view-recipe-btn">View Recipe</a>
         </div>
         `;
       // recipeCard = document.getElementsByClassName("recipe-card");
