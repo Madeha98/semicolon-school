@@ -58,17 +58,38 @@
           </div>
         </div>
         <div class="btn-container">
-          <div class="view-all-btn">
+          <!-- <div class="view-all-btn">
             <button>View all</button>
-          </div>
-          <div class="favourites-btn">
+          </div> -->
+          <div class="view-favourites-btn" id="view-favourites-btn" onclick="displayFavourites()">
             <button>Favourites</button>
           </div>
         </div>
       </div>
 
-      <div class="divider"></div>
-      <div class="divider-wrapper">
+      <div class="divider hidden" id="divider">
+        
+        <div class="divider-search">
+        <div class="search-bar divider-search-bar">
+          <input
+            type="text"
+            class="search-input"
+            id="divider-search-input"
+            placeholder="Enter ingredient or recipe name"
+          />
+          <button type="submit" class="search-btn" id="divider-search-btn">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+     <button class="home-btn" onclick="goToHome()">
+      <i class="fa fa-home"></i>
+    </button> 
+    </div>
+      
+      <h3 id="favourites-heading">Favourites:</h3>
+      <h3 id="results-heading">Search results:</h3>
+      </div>
+      <div class="divider-wrapper hidden" id="divider-wrapper">
         <div class="custom-shape-divider-top-1727399350">
           <svg
             data-name="Layer 1"
@@ -86,7 +107,7 @@
 
       <!-- Results -->
       <div class="results-section" id="results-section">
-        <h3 class="results-heading">Search results:</h3>
+        <!-- <h3 class="results-heading" id="results-heading">Search results:</h3> -->
         <div class="results" id="results">
           <!-- Result card -->
           <!-- <div class="recipe-card">
@@ -102,7 +123,7 @@
         </div>
 
         <!-- Recipe Popup -->
-        <div class="popup hidden" id="popup">
+        <div class="popup" id="popup">
           <!-- <div class="popup-img-container">
           <img src="food.jpg" alt="food" class="popup-img" />
           <div class="popup-img-overlay"></div>
@@ -119,6 +140,12 @@
         </div> -->
       </div>
     </div>
+
+    <!-- Favourites -->
+     <div class="favourites-section hidden" id="favourites-section">
+      <!-- <h3 class="favourites-heading" id="favourites-heading">Favourites:</h3> -->
+      <div class="favourites" id="favourites"></div>
+     </div>
     <script src="script.js"></script>
   </body>
 </html>
